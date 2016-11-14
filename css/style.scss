@@ -1,0 +1,85 @@
+
+@import "variables";
+@mixin vertical-align {
+  position: relative;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+*{
+  font-family: sans-serif;
+  color: $text-color;
+  text-transform: uppercase;
+  text-align: center;
+  margin: 0px;
+  font-weight: 400;
+}
+
+header {
+  background-color: $primary-color;
+  padding: 5px;
+}
+
+button{
+  border: 1px white solid;
+  border-radius: 10px;
+  padding: 10px;
+  background-color: transparent;
+  font-size: 17px;
+  color: white;
+  margin-top: 2%;
+}
+button:hover {
+  background-color: #d3795f;
+}
+
+ul {
+  margin-left: 6%;
+  li {
+   display: inline;
+   position: relative;
+   padding-right: 7%;
+   padding-top: 5%;
+    a {
+      text-decoration: none;
+      position: relative;
+      bottom: 45px;
+      }
+      a:hover {
+        color:  #d3795f;
+        border-bottom: 1px solid black;
+        padding-bottom: 5px;
+      }
+    }
+  }
+
+.hero {
+  background: url(https://images.unsplash.com/photo-1472289065668-ce650ac443d2?ixlib=rb-0.3.5&q=80&fm=jpg&crop=entropy&cs=tinysrgb&s=0404a6987743c9f447f3abde5e2a34d8) no-repeat top left;
+  background-size: cover;
+  height: 500px;
+  .hero-text {
+    @include vertical-align;
+      h1 {
+        font-size: 60px;
+        padding-top: 100px;
+    }
+  }
+}
+
+.banner {
+  padding-top: 2%;
+  background-color: $secondary-color;
+  height: 200px;
+  text-align: center;
+  .banner-text {
+    @include vertical-align;
+    width: 1008px;
+    margin: 0 auto;
+    h3 {
+      font-size: 25px;
+    }
+    button:hover {
+      background-color: #3c4242;
+    }
+  }
+}
